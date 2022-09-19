@@ -58,5 +58,5 @@ userefuzz -l <URL LIST> -i '<CUSTOM SQLI PAYLOAD>' -s <SLEEP ACCORDING TO PAYLOA
 
 <h3><b>Follow</b></h3>
 If this tool helped you or you like my work<br/>
-[`@root-tanishq`](https://twitter.com/root_tanishq)
+
 [![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/root_tanishq.svg?style=social&label=Follow%20%40root_tanishq)](https://twitter.com/root_tanishq)
