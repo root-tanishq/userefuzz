@@ -1,5 +1,5 @@
 <p align="center">
-<img src="images/logo.png" width=20%>
+<img src="https://github.com/root-tanishq/userefuzz/blob/main/images/logo.png" width=20%>
 </p>
 <h1 align="center">
 <b>UseReFuzz</b>
@@ -10,7 +10,7 @@ User-Agent , X-Forwarded-For and Referer SQLI Fuzzer made with `python`<br/>
 <h3><b>Installation</b></h3><br/>
 
 ```sh
-pip install userefuzz==1.1.0
+sudo pip3 install userefuzz
 ```
 
 ```sh
@@ -25,16 +25,16 @@ python3 setup.py install
 ```sh
 userefuzz -l <URL LIST>
 ```
-![list](images/parse_a_list.png)<br />
+![list](https://github.com/root-tanishq/userefuzz/blob/main/images/parse_a_list.png)<br />
 
 - **Setup proxy for vulnerable requests**
 
 ```sh
 userefuzz -l <URL LIST> -p 'http://127.1:8080'
 ```
-![proxy](images/proxy_setup.png)<br />
+![proxy](https://github.com/root-tanishq/userefuzz/blob/main/images/proxy_setup.png)<br />
 
-![burp_proxy](images/proxy_setup_burp.png)<br />
+![burp_proxy](https://github.com/root-tanishq/userefuzz/blob/main/images/proxy_setup_burp.png)<br />
 
 - **Custom Message**
 
@@ -44,9 +44,9 @@ userefuzz -l <URL LIST> -p 'http://127.1:8080'
 userefuzz -l <URL LIST> -p 'http://127.1:8080' -m '<Custom Message Here>'
 ```
 
-![message](images/custom_message.png)<br />
+![message](https://github.com/root-tanishq/userefuzz/blob/main/images/custom_message.png)<br />
 
-![burp_message](images/custom_message_burp.png)<br />
+![burp_message](https://github.com/root-tanishq/userefuzz/blob/main/images/custom_message_burp.png)<br />
 
 - **Custom Payload Injection**
 
@@ -54,8 +54,9 @@ userefuzz -l <URL LIST> -p 'http://127.1:8080' -m '<Custom Message Here>'
 userefuzz -l <URL LIST> -i '<CUSTOM SQLI PAYLOAD>' -s <SLEEP ACCORDING TO PAYLOAD>
 ```
 
-![inject](images/custom_inject.png)<br />
+![inject](https://github.com/root-tanishq/userefuzz/blob/main/images/custom_inject.png)<br />
 
 <h3><b>Follow</b></h3>
 If this tool helped you or you like my work<br/>
 [`@root-tanishq`](https://twitter.com/root_tanishq)
+[![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/root_tanishq.svg?style=social&label=Follow%20%40root_tanishq)](https://twitter.com/root_tanishq)

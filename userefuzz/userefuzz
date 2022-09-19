@@ -40,7 +40,7 @@ banner=f"""{bcolors.OKBLUE}
 
 😍 {bcolors.BOLD}Made with ❤️  By [🤵 Tanishq Rathore] Kun 🐱‍🚀 {bcolors.OKBLUE}
 »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»{bcolors.ENDC}{bcolors.BOLD}
-🌟 {bcolors.WARNING}STAR  ❯ https://github.com/userefuzz
+🌟 {bcolors.WARNING}STAR  ❯ https://github.com/root-tanishq/userefuzz
 🐦 {bcolors.WARNING}Twitter ❯ https://twitter.com/root_tanishq{bcolors.OKBLUE}{bcolors.BOLD}
 »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»
 {bcolors.ENDC}"""
