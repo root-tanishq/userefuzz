@@ -6,18 +6,34 @@
 </h1>
 
 User-Agent , X-Forwarded-For and Referer SQLI Fuzzer made with `python`<br/>
-**Works on `linux`, `Windows` and `MacOS` based systems**
+**Works on `linux`, `Windows` and `MacOS` based systems**<br />
+
+[![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/root_tanishq.svg?style=social&label=Follow%20%40root_tanishq)](https://twitter.com/root_tanishq)<br />
+
 <h3><b>Installation</b></h3><br/>
+
+- pip
 
 ```sh
 sudo pip3 install userefuzz
 ```
+- setup
 
 ```sh
 git clone https://github.com/root_tanishq/userefuzz
 cd userefuzz
 python3 setup.py install
 ```
+
+- kunto
+
+```sh
+kunto install userefuzz
+```
+- [linux standalone](https://github.com/root-tanishq/userefuzz/releases/download/UserReFuzz_standalone_binaries/userefuzz-1.1.1-linux.zip)
+
+- [Windows standalone](https://github.com/root-tanishq/userefuzz/releases/download/UserReFuzz_standalone_binaries/userefuzz-1.1.1-win.zip)
+
 <h3><b>Usage</b></h3><br/>
 
 - **Parsing A List of URLS**
@@ -56,7 +72,3 @@ userefuzz -l <URL LIST> -i '<CUSTOM SQLI PAYLOAD>' -s <SLEEP ACCORDING TO PAYLOA
 
 ![inject](https://github.com/root-tanishq/userefuzz/blob/main/images/custom_inject.png)<br />
 
-<h3><b>Follow</b></h3>
-If this tool helped you or you like my work<br/>
-
-[![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/root_tanishq.svg?style=social&label=Follow%20%40root_tanishq)](https://twitter.com/root_tanishq)
