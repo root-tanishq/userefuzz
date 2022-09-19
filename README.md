@@ -10,7 +10,7 @@ User-Agent , X-Forwarded-For and Referer SQLI Fuzzer made with `python`<br/>
 <h3><b>Installation</b></h3><br/>
 
 ```sh
-pip3 install userefuzz
+pip install userefuzz==1.1.0
 ```
 
 ```sh
@@ -58,4 +58,4 @@ userefuzz -l <URL LIST> -i '<CUSTOM SQLI PAYLOAD>' -s <SLEEP ACCORDING TO PAYLOA
 
 <h3><b>Follow</b></h3>
 If this tool helped you or you like my work<br/>
-![@root-tanishq](https://twitter.com/root_tanishq)
+[`@root-tanishq`](https://twitter.com/root_tanishq)
