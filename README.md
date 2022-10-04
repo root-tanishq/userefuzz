@@ -10,6 +10,9 @@ User-Agent , X-Forwarded-For and Referer SQLI Fuzzer made with `python`<br/>
 
 [![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/root_tanishq.svg?style=social&label=Follow%20%40root_tanishq)](https://twitter.com/root_tanishq)<br />
 
+<h2><b>Legality</h2></b>
+Usage of userefuzz for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this programUsage of userefuzz for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program.
+<br />
 <h3><b>Installation</b></h3><br/>
 
 - pip
