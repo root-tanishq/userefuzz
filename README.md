@@ -20,10 +20,10 @@ Usage of userefuzz for attacking targets without prior mutual consent is illegal
 ```sh
 sudo pip3 install userefuzz
 ```
-- setup
+- setup (Recommended)
 
 ```sh
-git clone https://github.com/root_tanishq/userefuzz
+git clone https://github.com/root-tanishq/userefuzz
 cd userefuzz
 python3 setup.py install
 ```
