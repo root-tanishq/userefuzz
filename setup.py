@@ -1,12 +1,12 @@
 from setuptools import setup
 
 def readme():
-    with open('README.md') as f:
+    with open('pypi.md') as f:
         return f.read()
 
 setup(
     name='userefuzz',
-    version='1.1.1',
+    version='2.0.2',
     long_description=readme(),
     long_description_content_type="text/markdown",
     description='User-Agent and Referer Header SQLI Fuzzer',
@@ -14,11 +14,10 @@ setup(
     author='Tanishq Rathore',
     license='MIT',
     packages=['userefuzz'],
-    scripts=['userefuzz/userefuzz'],
+    scripts=['userefuzz/userefuzz.py'],
     install_requires=['requests'],
 
     classifiers=[
         'Programming Language :: Python :: 3',
     ],
 )
-
