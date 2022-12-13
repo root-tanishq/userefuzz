@@ -5,7 +5,7 @@
 
 [![PYPI](https://img.shields.io/badge/PYPI-UseReFuzz-orange)](https://pypi.org/project/userefuzz/) 
 [![MIT](https://img.shields.io/github/license/root-tanishq/userefuzz)](https://github.com/root-tanishq/userefuzz/blob/main/LICENSE) 
-[![Version](https://img.shields.io/badge/Latest--Version-2.0-brightgreen)](#)
+[![Version](https://img.shields.io/badge/Latest--Version-2.0.2-brightgreen)](#)
 [![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/root_tanishq.svg?style=social&label=Follow%20%40root_tanishq)](https://twitter.com/root_tanishq) <br />
 [![Youtube](https://img.shields.io/youtube/channel/subscribers/UC0HLRnmOx3x_hsAGAdG9VaQ?style=social)](https://www.youtube.com/@boyfromfuture69)
 [![Github](https://img.shields.io/github/stars/root-tanishq/userefuzz?style=social)](https://github.com/root-tanishq/userefuzz/stargazers)
