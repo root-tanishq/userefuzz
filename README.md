@@ -42,7 +42,7 @@ Usage of userefuzz for attacking targets without prior mutual consent is illegal
 ### pip
 
 ```sh
-pip install userefuzz
+sudo pip install userefuzz
 ```
 
 ### setup
@@ -50,7 +50,7 @@ pip install userefuzz
 ```sh
 git clone https://github.com/root-tanishq/userefuzz
 cd userefuzz
-python3 setup.py install
+sudo python3 setup.py install
 ```
 
 <h1 align="center">
