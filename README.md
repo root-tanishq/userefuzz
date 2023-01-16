@@ -15,7 +15,7 @@
 <h3 align="center">
 
 User-Agent , X-Forwarded-For and Referer SQLI Fuzzer made with `python`<br/>
-**Works on `linux`and `unix` based systems**<br />
+**Works on `linux` and `unix` based systems**<br />
 </h3>
 
 <table>
