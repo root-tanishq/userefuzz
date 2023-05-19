@@ -1,11 +1,11 @@
 <p align="center">
-<img src="https://raw.githubusercontent.com/root-tanishq/userefuzz/main/images/userefuzz_icon.png">
+<img src="https://raw.githubusercontent.com/root-tanishq/userefuzz/main/images/ufz_banner_may_23.png">
 </p>
 <h1 align="center">
 
 [![PYPI](https://img.shields.io/badge/PYPI-UseReFuzz-orange)](https://pypi.org/project/userefuzz/) 
 [![MIT](https://img.shields.io/github/license/root-tanishq/userefuzz)](https://github.com/root-tanishq/userefuzz/blob/main/LICENSE) 
-[![Version](https://img.shields.io/badge/Latest--Version-2.1.0-brightgreen)](#)
+[![Version](https://img.shields.io/badge/Latest--Version-2.2.0-brightgreen)](#)
 [![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/root_tanishq.svg?style=social&label=Follow%20%40root_tanishq)](https://twitter.com/root_tanishq) <br />
 [![Youtube](https://img.shields.io/youtube/channel/subscribers/UC0HLRnmOx3x_hsAGAdG9VaQ?style=social)](https://www.youtube.com/@boyfromfuture69)
 [![Github](https://img.shields.io/github/stars/root-tanishq/userefuzz?style=social)](https://github.com/root-tanishq/userefuzz/stargazers)
@@ -126,21 +126,20 @@ $ userefuzz <LIST/URL> -m <MESSAGE>
 </p>
 
 ### Custom payload with custom sleep
+
+> Replace `sleep time` with `$UFZ$` variable for double verification of userefuzz
+
 ```sh
 $ userefuzz <LIST/URL> -i <CUSTOM SQLI PAYLOAD> -s <SLEEP COUNT IN THE PAYLOAD>
 ```
-<p align="center">
-<img src="https://raw.githubusercontent.com/root-tanishq/userefuzz/main/images/u_2.1_pinject.png">
-<img src="https://raw.githubusercontent.com/root-tanishq/userefuzz/main/images/u_2.1_pinject2.png">
-</p>
 
 ### Multi payload with custom sleep
+
+> Replace `sleep time` with `$UFZ$` variable for double verification of userefuzz
+
 ```sh
 $ userefuzz <LIST/URL> -i <SQLI PAYLOAD FILE> -s <SLEEP COUNT IN THE PAYLOAD>
 ```
-<p align="center">
-<img src="https://raw.githubusercontent.com/root-tanishq/userefuzz/main/images/u_2.1_finject.png">
-</p>
 
 ### Custom header injection
 ```sh
@@ -181,20 +180,3 @@ $ userefuzz <LIST/URL> -o <OUTPUT FILE NAME WITHOUT EXT>
 <p align="center">
 <img src="https://raw.githubusercontent.com/root-tanishq/userefuzz/main/images/u_2.1_out_md.png">
 </p>
-<table>
-<tr>
-<td>  
-<h2 align="center">
-
-## Telify Notifications
-</h2>
-
-> The Tool uses [Telify](https://github.com/root-tanishq/telify) configuration file for sending notification .So inorder to use this feature you need to setup telify.
-
-```sh
-$ userefuzz <LIST / URL> -t
-```
-
-</td>
-</tr>
-</table>
